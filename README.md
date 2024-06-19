@@ -1,4 +1,4 @@
-# IMCHelper: Body Mass Index Calculator in Java
+# MultiGen: Multiplication Table Generator (MTG)
 
 ## Introduction
 
