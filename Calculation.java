@@ -4,18 +4,17 @@ import java.awt.event.ActionListener;
 
 public class Calculation extends JFrame {
     private JTextField multiplicated;
-    private JTextField times;
-    private JLabel result;
+    private JTextArea resultArea;
 
     public Calculation() {
         //  Window
         setTitle("Multi Gen: Multiplication generator");
-        setSize(300, 200);
+        setSize(480, 400); // Ajuste de tamaño para acomodar el JTextArea
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
 
         //  Components
-        JLabel multiply = new JLabel("First number: ");
+        JLabel multiply = new JLabel("Number: ");
         multiply.setBounds(10, 10, 80, 25);
         add(multiply);
 
@@ -23,21 +22,14 @@ public class Calculation extends JFrame {
         multiplicated.setBounds(100, 10, 165, 25);
         add(multiplicated);
 
-        JLabel multiplied = new JLabel("Times: ");
-        multiplied.setBounds(10, 40, 80, 25);
-        add(multiplied);
-
-        times = new JTextField();
-        times.setBounds(100, 40, 165, 25);
-        add(times);
-
         JButton calculateButton = new JButton("Calculate");
         calculateButton.setBounds(10, 80, 100, 25);
         add(calculateButton);
 
-        result = new JLabel("Result: ");
-        result.setBounds(10, 110, 200, 25);
-        add(result);
+        resultArea = new JTextArea();
+        resultArea.setBounds(10, 110, 450, 300);
+        resultArea.setEditable(false);
+        add(resultArea);
 
         calculateButton.addActionListener(new ActionListener() {
             @Override
@@ -49,13 +41,24 @@ public class Calculation extends JFrame {
 
     private void calculate() {
         try {
-            double first = Double.parseDouble(multiplicated.getText());
-            double second = Double.parseDouble(multiplicated.getText());
-            double multiResult = first * second;
-            result.setText(String.format("Result: %s", multiResult));
+            double number = Double.parseDouble(multiplicated.getText());
+
+            StringBuilder sb = new StringBuilder();
+            for (int i = 1; i <= 12; i++) {
+                double resulter = number * i;
+                sb.append(String.format("%.2f multiplied by %d is: %.2f\n", number, i, resulter));
+            }
+
+            resultArea.setText(sb.toString());
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this, "Please, input correct number values");
         }
     }
 
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            Calculation calc = new Calculation();
+            calc.setVisible(true);
+        });
+    }
 }
