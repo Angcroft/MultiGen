@@ -2,9 +2,7 @@
 
 ## Introduction
 
-**MultiGen** is a graphical application written in Java to calculate the Body Mass Index (BMI) based on the user's height and weight. This project was created to learn about Java and is made available to the public for those who are also interested in this programming language and want to understand some of its syntax. IMCHelper is a useful tool for Java learners as it offers a simple and clear graphical interface for performing BMI calculations.
-
-is a graphical application written in Java to generate and show a multiplication table from 1 to twelve. The user can input any any number and the program will do the rest. This project was created to learn about Java and is made available to the public for those who are also interested in this programming language and want to understand some of its syntax. MultiGen is a useful tool for Java learners as it offers a simple and clear graphical interface for performing multiplication tables.
+**MultiGen** is a graphical application written in Java to generate and show a multiplication table from 1 to twelve. The user can input any any number and the program will do the rest. This project was created to learn about Java and is made available to the public for those who are also interested in this programming language and want to understand some of its syntax. MultiGen is a useful tool for Java learners as it offers a simple and clear graphical interface for performing multiplication tables.
 
 ## Features
 
