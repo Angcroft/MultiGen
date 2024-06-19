@@ -67,6 +67,11 @@ When you run the program, a window will appear with a field to enter a number an
 
 ## Screenshot
 
+![01](https://github.com/Angcroft/MultiGen/assets/69369902/560e78c0-4e32-4307-8663-7d4d5cdab3a3)
+
+![02](https://github.com/Angcroft/MultiGen/assets/69369902/1d60e2dd-ef6e-4a10-b9a8-01af3b9e2bb7)
+
+
 ## About Using This Project
 
 This project is not intended for contributions, but you are free to use the code for your own projects. In accordance with the MIT license, everyone is granted the freedom to use this code for any beneficial purpose.
